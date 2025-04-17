@@ -42,3 +42,19 @@ do {
   linea = linea + 1
 }
 while (linea<=10)
+
+/*
+
+  -- Hacer una determinada cantidad de repeticiones --
+
+  - FOR -
+
+  for (let contador; condicion logica; contador++) {
+    (Lineas de codigo que quiero repetir)
+  }
+
+*/
+
+for(let contador = 10; contador >= 0; contador--) {
+  document.writeln(` <p>Cuenta regresiva...${contador}</p> `);
+}
