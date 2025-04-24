@@ -20,6 +20,11 @@ function sumar(numero1, numero2) {
 
 // - Funciones que retornan un valor
 
+function multiplicar (numero1, numero2) {
+  const resultado = numero1 * numero2
+  return resultado
+}
+
 // LLamar a una funcion
 saludar();
 
@@ -28,3 +33,9 @@ const num2 = parseInt(prompt("Ingrese un segundo numero: "))
 
 sumar(num1,num2)
 sumar(num1,10)
+
+//console.log(resultado) // Error en tiempo de ejecucion pero no en el codigo.
+// la variable existe dentro de la funcion pero no puedo solicitarla fuera de ella.
+
+const resultado = multiplicar(num1,num2)
+document.writeln("<br> El resultado de la multiplicacion es: " + resultado)
