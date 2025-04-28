@@ -31,18 +31,13 @@ function sumar(numero1, numero2) {
 // }
 
 // Sintaxis forma: ARROW FUNCTION
-const multiplicar = (numero1,numero2) => {
-  const resultado = numero1 * numero2
-  console.log(resultado)
-  return resultado
+// const multiplicar = (numero1,numero2) => {
+//   const resultado = numero1 * numero2
+//   console.log(resultado)
+//   return resultado
+// }
 
-}
-const multiplicar = (numero1,numero2) => {
-  // const resultado = numero1 * numero2
-  // console.log(resultado)
-  // return resultado
-  return numero1 * numero2
-}
+const multiplicar = (numero1,numero2) => numero1 * numero2
 
 // LLamar a una funcion
 saludar();

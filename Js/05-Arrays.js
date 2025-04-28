@@ -7,6 +7,17 @@ const paises = [];
 // - Array con datos
 const comidas = ["tacos", "sushi", "pasta", "asado"];
 
+// Declaracion de funciones...
+function listarComidas(titulo) {
+  document.writeln(`<h3>${titulo}</h3>`);
+
+  document.writeln(`<ul>`)
+  for(let i = 0; i < comidas.length; i++) {
+    document.writeln(`<li>${comidas[i]}</li>`)
+  }
+  document.writeln(`</ul>`)
+}
+
 // - Mostrar array en consola
 console.log(paises);
 console.log(comidas);
@@ -16,21 +27,24 @@ document.writeln(paises + "<br>");
 document.writeln(comidas);
 document.writeln("<br><br> Cantidad de elementos en el array: " + comidas.length);
 
-document.writeln(`<ul>`)
-for(let i = 0; i < comidas.length; i++) {
-  document.writeln(`<li>${comidas[i]}</li>`)
-}
-document.writeln(`</ul>`)
+// document.writeln(`<ul>`)
+// for(let i = 0; i < comidas.length; i++) {
+//   document.writeln(`<li>${comidas[i]}</li>`)
+// }
+// document.writeln(`</ul>`)
+
+listarComidas(`Mostrar el array de comidas: `)
 
 // - Agregar elementos al array (al final) (unshift())
-document.writeln(`<h3>Agregar un elemento al principio del array</h3>`);
+// document.writeln(`<h3>Agregar un elemento al principio del array</h3>`);
 comidas.unshift("Tortilla de papas", "Pizza");
+listarComidas(`Agregar un elemento al principio del array`)
 
-document.writeln(`<ul>`)
-for(let i = 0; i < comidas.length; i++) {
-  document.writeln(`<li>${comidas[i]}</li>`)
-}
-document.writeln(`</ul>`)
+// document.writeln(`<ul>`)
+// for(let i = 0; i < comidas.length; i++) {
+//   document.writeln(`<li>${comidas[i]}</li>`)
+// }
+// document.writeln(`</ul>`)
 
 // - Agregar elementos al array (al inicio) (push())
 document.writeln(`<h3>Agregar un elemento al principio del array</h3>`);
