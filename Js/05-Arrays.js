@@ -32,7 +32,7 @@ for(let i = 0; i < comidas.length; i++) {
 }
 document.writeln(`</ul>`)
 
-// - Agregar elementos al array (al inicio) (unshift())
+// - Agregar elementos al array (al inicio) (push())
 document.writeln(`<h3>Agregar un elemento al principio del array</h3>`);
 comidas.push("Ensalada");
 
