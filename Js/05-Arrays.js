@@ -108,3 +108,20 @@ for(let i = 0; i < comidas.length; i++) {
   document.writeln(`<li>${comidas[i]}</li>`)
 }
 document.writeln(`</ul>`)
+
+// Como saber si existe un dato en el array (find)
+
+const tacos = comidas.find((comida) => comida === "tacos")
+const sushi = comidas.find((comida) => comida === "sushi")
+console.log(tacos);
+console.log(sushi);
+
+// Como saber si existe un dato en el array y ver su posicion
+const tacosPosition = comidas.findIndex((comida) => comida === "tacos")
+console.log(tacosPosition);
+document.writeln(`Indice de los tacos: ${tacosPosition} <br>`)
+
+const sushiPosition = comidas.findIndex((comida) => comida === "sushi")
+console.log(sushiPosition);
+document.writeln(`Indice de los tacos: ${sushiPosition}`)
+
