@@ -35,7 +35,7 @@ document.writeln("<br><br> Cantidad de elementos en el array: " + comidas.length
 
 listarComidas(`Mostrar el array de comidas: `)
 
-// - Agregar elementos al array (al final) (unshift())
+// - Agregar elementos al array (al principio) (unshift())
 // document.writeln(`<h3>Agregar un elemento al principio del array</h3>`);
 comidas.unshift("Tortilla de papas", "Pizza");
 listarComidas(`Agregar un elemento al principio del array`)
@@ -46,8 +46,8 @@ listarComidas(`Agregar un elemento al principio del array`)
 // }
 // document.writeln(`</ul>`)
 
-// - Agregar elementos al array (al inicio) (push())
-document.writeln(`<h3>Agregar un elemento al principio del array</h3>`);
+// - Agregar elementos al array (al final) (push())
+document.writeln(`<h3>Agregar un elemento al final del array</h3>`);
 comidas.push("Ensalada");
 
 document.writeln(`<ul>`)
