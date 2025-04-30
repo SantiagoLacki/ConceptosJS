@@ -37,8 +37,16 @@ document.writeln(`<p>El dni del usuario es: ${usuario.dni}</p>`);
 document.writeln(`<p>El email del usuario es: ${usuario[`email`]}</p>`);
 document.writeln(`<p>El email del usuario es: ${usuario[`emails`]}</p>`);
 
+// Modificar una propiedad de un objeto
+usuario.nombreUsuario = "Santiago02"
+document.writeln(`<p>El usuario nuevo es: ${usuario.nombreUsuario}</p>`);
+
+// Agregar una propiedad al objeto
+usuario.github = "https://github.com/"
+document.writeln(`<p>El link de GitHub del usuario es: ${usuario.github}</p>`);
+
 // Ejecutar un metodo
-usuario.nombreCompleto()
-usuario.cambiarEstado()
+// usuario.nombreCompleto()
+// usuario.cambiarEstado()
 
 // Clases:
