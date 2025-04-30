@@ -20,10 +20,11 @@ const usuario = {
 
   // Metodos (Que acciones puedo realizar con los datos del objeto)
   nombreCompleto: function () {
-    document.writeln(`Hola soy...`)
+    console.log(this)
+    document.writeln(`<p>Hola soy ${this.nombre}, ${this.apellido}</p>`)
   },
   cambiarEstado: () => {
-    document.writeln(`Aqui tengo que cambiar el estado...`)
+    document.writeln(`<p>Aqui tengo que cambiar el estado...</p>`)
   }
 }
 
@@ -45,8 +46,15 @@ document.writeln(`<p>El usuario nuevo es: ${usuario.nombreUsuario}</p>`);
 usuario.github = "https://github.com/"
 document.writeln(`<p>El link de GitHub del usuario es: ${usuario.github}</p>`);
 
+// Borrar una propiedad al objeto (No suele utilizarse)
+delete usuario.github
+document.writeln(`<p>El link de GitHub del usuario es: ${usuario.github}</p>`);
+
+// trabajar con los metodos
+usuario.nombreCompleto()
+
 // Ejecutar un metodo
 // usuario.nombreCompleto()
-// usuario.cambiarEstado()
+usuario.cambiarEstado()
 
 // Clases:
