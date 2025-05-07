@@ -39,7 +39,7 @@ class Personas {
   // Metodos
   mostrarDatos() {
     document.writeln(`<ul>
-      <li>Nombre: ${this.nombre} </li>
+      <li>Nombre: ${this.#nombre} </li>
       <li>Apellido: ${this.apellido} </li>
       <li>DNI: ${this.dni} </li>
       <li>Email: ${this.#email} </li>
@@ -49,13 +49,55 @@ class Personas {
 }
 
 class Alumno extends Personas {
-  constructor(nombreParam,apellido,dni,email,edad,legajo,curso,asistencia) {
-    
+  #curso;
+  #legajo;
+  #asistencia
+  constructor(nombreParam,apellido,dni,email,edad,legajo,curso) {
+    super(nombreParam,apellido,dni,email,edad)
+    this.#curso = curso;
+    this.#legajo = legajo;
+    this.#asistencia = 0;
   }
   
   // get y set
-  
+  get getCurso(){
+    return this.#curso
+  }
+
+  set setCurso(nuevoCurso){
+    //puedo agregar las validaciones que quiera.
+    if(nuevoCurso.length>8){
+      this.#curso = nuevoCurso
+    }
+  }
+
+  get getLegajo(){
+    return this.#legajo
+  }
+
+  set setLegajo(nuevoLegajo){
+    this.#legajo = nuevoLegajo
+  }
+
+  get getAsistencia(){
+    return this.#asistencia
+  }
+
+  set setAsistencia(nuevaAsistencia){
+    this.#asistencia = nuevaAsistencia
+  }
+
   // metodos
+  mostrarDatos() {
+    document.writeln(`<ol>
+      <li>DNI: ${this.dni} </li>
+      <li>Email: ${this.getEmail} </li>
+      <li>Edad: ${this.edad} </li>
+      <li>Asistencia: ${this.getAsistencia} </li>
+      <li>Legajo: ${this.getLegajo} </li>
+      <li>Curso: ${this.getCurso} </li>
+    </ol>`)
+  }
 
 }
 
@@ -63,7 +105,7 @@ class Alumno extends Personas {
 // Cuando utilizamos a la clase: crear un objeto o instanciar
 
 const santiago = new Personas("Santiago", "Lacki", "12345678", "santiago123@gmail.com", 25)
-const ignacio = new Personas("ignacio", "Lacki", "98765432", "ignacio321@gmail.com", 24)
+const ignacio = new Personas("Ignacio", "Lacki", "98765432", "ignacio321@gmail.com", 24)
 console.log(santiago.getEmail);
 console.log(ignacio);
 
@@ -79,3 +121,6 @@ ignacio.mostrarDatos();
 santiago.setEmail = "santiago222@gmail.com" 
 santiago.mostrarDatos();
 
+const pedro = new Alumno('Pedro', 'Sanchez', '12345678', 'pedro@gmail.com', 25, 222,'Matematicas')
+pedro.mostrarDatos();
+console.log(pedro)
